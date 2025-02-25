@@ -39,3 +39,4 @@ Route::get('/home/{name}/{age}', function ($name, $age) {
 Route::get('/sum/{num1}/{num2}', function ($num1, $num2) {
     return view("The addition of $num1 and $num2 is".$num1+$num2);
 });
+
