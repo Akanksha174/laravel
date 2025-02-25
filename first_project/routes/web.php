@@ -36,7 +36,10 @@ Route::get('/home/{name}/{age}', function ($name, $age) {
     return view('home', ['name' => $name, 'age' => $age]);
 });
 
-Route::get('/sum/{num1}/{num2}', function ($num1, $num2) {
-    return view("The addition of $num1 and $num2 is".$num1+$num2);
-});
+// Route::get('/sum/{num1}/{num2}', function ($num1, $num2) {
+//     return view("The addition of $num1 and $num2 is".$num1+$num2);
+// });
 
+Route::get('/sum/{num1}/{num2}', function ($num1, $num2) {
+    return view('sum',["num1"=>$num1,"num2"=>$num2,]);
+});

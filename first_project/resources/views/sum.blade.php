@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Hello I'm {{$name}} and my age is {{$age}}</p>
+    <h1>The value of num1 {{$num1}}</h1>
+    <h1>The value of num2 {{$num2}}</h1>
+    <?php 
+    echo "The addition of $num1 and $num2 is".$num1+$num2;
+    ?>
 </body>
 </html>
