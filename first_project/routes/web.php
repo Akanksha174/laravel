@@ -43,3 +43,8 @@ Route::get('/home/{name}/{age}', function ($name, $age) {
 Route::get('/sum/{num1}/{num2}', function ($num1, $num2) {
     return view('sum',["num1"=>$num1,"num2"=>$num2,]);
 });
+
+Route::get('/about', function () {
+    return view('about');
+});
+    Route::redirect('/home', '/about');
