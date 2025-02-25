@@ -48,3 +48,7 @@ Route::get('/about', function () {
     return view('about');
 });
     Route::redirect('/home', '/about');
+
+Route::get('/Main', function () {
+    return view('HomePage');
+});
