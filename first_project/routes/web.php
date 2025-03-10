@@ -79,7 +79,9 @@ Route::get('/deletecookie', function(){
     ->cookie('','',-1);
 });
 
-
+//Controller
+use App\Http\Controllers\FormHandling;
+Route::get('/formhandling', [FormHandling::class, 'getform']);
 ?>
 
 
