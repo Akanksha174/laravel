@@ -1,6 +1,6 @@
 <h1>Student Name</h1>
 
-<form action="submitform.php" method="post">
+<form action="/submitform" method="post">
 @csrf 
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br><br>
