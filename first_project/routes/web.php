@@ -52,3 +52,34 @@ Route::get('/about', function () {
 Route::get('/Main', function () {
     return view('HomePage');
 });
+
+Route::get('/array', function(){
+    $mydetails=[
+    "name" => "abc",
+    "regNo"=>1234,
+    "phoneNo"=>489237423,
+    "Email"=> "abc@gmail.com"
+];
+    return response()->json($mydetails);
+});
+
+//cookie 
+Route::get('/setcookie', function(){
+    return response("Cookie has been set")->cookie('username','Amit', 100000);
+});
+
+Route::get('/getcookie', function(){
+    return request()->cookie('username');
+    return "Stored Cookie value is" .$username;
+});
+
+//deleting cookie
+Route::get('/deletecookie', function(){
+    return response("Cookie value is deleted")
+    ->cookie('','',-1);
+});
+
+
+?>
+
+
