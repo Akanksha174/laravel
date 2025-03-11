@@ -82,7 +82,7 @@ Route::get('/deletecookie', function(){
 //Controller
 use App\Http\Controllers\FormHandling;
 Route::get('/formhandling', [FormHandling::class, 'getform']);
-Route::post('/submitform', [FormHandling::class, 'submitform']);
+Route::post('/submit', [FormHandling::class, 'submitform']);
 
 
 ?> 

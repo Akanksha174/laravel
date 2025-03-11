@@ -10,8 +10,7 @@ class FormHandling extends Controller{
 
     public function submitform(Request $request){
         echo "<pre>";
-        print_r($request);
-        echo $request->name;
+        print_r($request->all());
     }
 }
 ?>
