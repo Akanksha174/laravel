@@ -1,17 +1,19 @@
 <h1>Student Data</h1>
 <!-- {{print_r($students)}} -->
 
-<table>
+<table border="1">
     <tr>
-        <!-- <th>ID</th> -->
+        <th>ID</th>
         <th>Name</th>
         <th>Email</th>
         <th>City</th>
     </tr>
+    @foreach($students as $student)
     <tr>
-        <!-- <td>{{$students->ID}}</td> -->
-        <td>{{$students->Name}}</td>
-        <td>{{$students->Email}}</td>
-        <td>{{$students->City}}</td>
+        <td>{{$student->ID}}</td>
+        <td>{{$student->Name}}</td>
+        <td>{{$student->Email}}</td>
+        <td>{{$student->City}}</td>
     </tr>
+    @endforeach 
 </table>
