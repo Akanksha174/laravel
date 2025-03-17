@@ -84,6 +84,9 @@ use App\Http\Controllers\FormHandling;
 Route::get('/formhandling', [FormHandling::class, 'getform']);
 Route::post('/submit', [FormHandling::class, 'submitform']);
 
+//Database 
+use App\Http\Controllers\StudentController;
+Route::get('/getdata', [StudentController::class, 'index']);
 
 ?> 
 
