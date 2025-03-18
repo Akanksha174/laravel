@@ -88,7 +88,9 @@ Route::post('/submit', [FormHandling::class, 'submitform']);
 use App\Http\Controllers\StudentController;
 Route::get('/getdata', [StudentController::class, 'index']);
 
-
+use App\Http\Controllers\ProductController;
+Route::get('/showdata', [ProductController::class, 'showdata']);
 ?> 
+
 
 
