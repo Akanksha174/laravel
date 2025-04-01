@@ -85,11 +85,15 @@ Route::get('/formhandling', [FormHandling::class, 'getform']);
 Route::post('/submit', [FormHandling::class, 'submitform']);
 
 //Database 
-use App\Http\Controllers\StudentController;
-Route::get('/getdata', [StudentController::class, 'index']);
+// use App\Http\Controllers\StudentController;
+// Route::get('/getdata', [StudentController::class, 'index']);
 
 use App\Http\Controllers\ProductController;
 Route::get('/showdata', [ProductController::class, 'showdata']);
+
+use App\Http\Controllers\TaskController;
+Route::get('/tasks', [TaskController::class, 'index']);
+
 ?> 
 
 
