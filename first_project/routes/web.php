@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Login;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +12,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::post('/login',[Login::class,'loginbtn']);
+Route::view('/login' ,'login');
+Route::view('/profile' ,'profile');
+Route::view('/home', 'home');
+Route::view('/abt','about');
 Route::get('/', function () {
     return view('welcome');
 });
@@ -44,10 +48,7 @@ Route::get('/sum/{num1}/{num2}', function ($num1, $num2) {
     return view('sum',["num1"=>$num1,"num2"=>$num2,]);
 });
 
-Route::get('/about', function () {
-    return view('about');
-});
-    Route::redirect('/home', '/about');
+
 
 Route::get('/Main', function () {
     return view('HomePage');
