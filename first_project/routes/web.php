@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Login;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -82,26 +83,28 @@ Route::get('/deletecookie', function(){
 
 //Controller
 use App\Http\Controllers\FormHandling;
-Route::get('/formhandling', [FormHandling::class, 'getform']);
-Route::post('/submit', [FormHandling::class, 'submitform']);
+use App\Http\Controllers\MailingController;
+use App\Http\Controllers\Myfileuploading;
 
-//Database 
-// use App\Http\Controllers\StudentController;
-// Route::get('/getdata', [StudentController::class, 'index']);
+// Route::get('/formhandling', [FormHandling::class, 'getform']);
+// Route::post('/submit', [FormHandling::class, 'submitform']);
 
-use App\Http\Controllers\ProductController;
-Route::get('/showdata', [ProductController::class, 'showdata']);
+// //Database 
+// // use App\Http\Controllers\StudentController;
+// // Route::get('/getdata', [StudentController::class, 'index']);
 
-use App\Http\Controllers\TaskController;
-Route::get('/tasks', [TaskController::class, 'index']);
+// use App\Http\Controllers\ProductController;
+// Route::get('/showdata', [ProductController::class, 'showdata']);
+
+// use App\Http\Controllers\TaskController;
+// Route::get('/tasks', [TaskController::class, 'index']);
 
 //fileupload
-use App\Http\Controllers\Myfileuploading;
-use App\Http\Controllers\Fileupload;
-use App\Http\Controllers\MailingController;
-
-Route::get('/file', 'Myfileupload');
-Route::post('uploadfile', [Myfileuploading::class, 'onClick']);
+Route::view('/file','fileupload');
+Route::post('/uploadfile',[Myfileuploading::class, 'onClick']);
+Route::get('\sendemail',[MailingController::class,'sendemail']);
+Route::post('/uploadfile', [fileupload::class,'onupload']);
+Route::view('/fileupload','fileupload');
 
 ?> 
 

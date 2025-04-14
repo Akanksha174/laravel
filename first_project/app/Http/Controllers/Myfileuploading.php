@@ -6,7 +6,7 @@ class Myfileuploading extends Controller
 {
     public function onClick(Request $req)
     {
-        $path = $req->file('file')->store('public');
+        $path = $req->file('myfile')->store('public');
         return $path;
     }
 }
