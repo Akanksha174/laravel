@@ -95,6 +95,16 @@ Route::get('/showdata', [ProductController::class, 'showdata']);
 use App\Http\Controllers\TaskController;
 Route::get('/tasks', [TaskController::class, 'index']);
 
+//fileupload
+use App\Http\Controllers\Myfileuploading;
+use App\Http\Controllers\Fileupload;
+use App\Http\Controllers\MailingController;
+Route::view('/file', 'myfileupload');
+Route::post('/uploadfile', [Fileupload::class, 'upload']);
+Route::get('\sendmail', [MailingController::class, 'sendmail']);
+
+Route::post('/uploadfile', [Fileupload::class, 'sendmail']);
+
 ?> 
 
 
