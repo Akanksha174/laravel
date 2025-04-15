@@ -105,7 +105,7 @@ use App\Http\Controllers\Myfileuploading;
 // Route::get('\sendemail',[MailingController::class,'sendemail']);
 // Route::view('/myprofile','myprofile');
 
-Route::get('/welcomepage', function () {
+Route::get('/wp', function () {
     return view('welcome');
 });
 ?> 
