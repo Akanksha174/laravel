@@ -100,12 +100,12 @@ use App\Http\Controllers\Myfileuploading;
 // Route::get('/tasks', [TaskController::class, 'index']);
 
 //fileupload
-Route::view('/file','fileupload');
-Route::post('/uploadfile',[FileUploadController::class, 'onClick']);
-Route::get('\sendemail',[MailingController::class,'sendemail']);
-Route::view('/myprofile','myprofile');
+// Route::view('/file','fileupload');
+// Route::post('/uploadfile',[FileUploadController::class, 'onClick']);
+// Route::get('\sendemail',[MailingController::class,'sendemail']);
+// Route::view('/myprofile','myprofile');
 
-Route::get('/welcome-page', function () {
+Route::get('/welcomepage', function () {
     return view('welcome');
 });
 ?> 
