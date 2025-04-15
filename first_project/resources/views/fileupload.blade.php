@@ -1,4 +1,4 @@
-<form method="post" action="" enctype="multipart/form-data">
+<form method="post" action="/uploadfile" enctype="multipart/form-data">
     Upload File:
     @csrf
     <input type="file" name="myfile" id=""/>

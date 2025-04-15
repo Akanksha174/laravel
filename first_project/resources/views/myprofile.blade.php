@@ -1,0 +1,1 @@
+<img src="{{asset('storage/images/'.$path)}}" width="100" height="100">

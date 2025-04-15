@@ -101,11 +101,13 @@ use App\Http\Controllers\Myfileuploading;
 
 //fileupload
 Route::view('/file','fileupload');
-Route::post('/uploadfile',[Myfileuploading::class, 'onClick']);
+Route::post('/uploadfile',[FileUploadController::class, 'onClick']);
 Route::get('\sendemail',[MailingController::class,'sendemail']);
-Route::post('/uploadfile', [fileupload::class,'onupload']);
-Route::view('/fileupload','fileupload');
+Route::view('/myprofile','myprofile');
 
+Route::get('/welcome-page', function () {
+    return view('welcome');
+});
 ?> 
 
 
